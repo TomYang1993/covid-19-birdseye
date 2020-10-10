@@ -1,7 +1,9 @@
 import React, {  useEffect, useState } from 'react';
 import * as d3 from "d3";
 
-function HistoGramBar({ data }) {
+function HistoGramBar({ data, scales }) {
+
+    const {xScale, yScale} = scales;
 
     useEffect(() => {
 
@@ -9,9 +11,17 @@ function HistoGramBar({ data }) {
     }, []);
 
     return (
-        <div className="histogram-bar">
-            {data.length > 0 ? <div>{data[0].date}</div>: <div></div>}
-        </div>
+        <g>
+            {data.map(dailyData =>
+                (<rect key={dailyData.date}
+                      x={xScale(new Date(dailyData.date))}
+                      y={300 - yScale(dailyData.positive)}
+                      height={yScale(dailyData.positive)}
+                      width={10}
+                      fill={"teal"}
+                />)
+            )}
+        </g>
     )
 }
 
