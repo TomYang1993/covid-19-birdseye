@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d3a6fe603996a7eb8803cf86e08490e",
+    "revision": "6850f453a79612e540ca690722596cbe",
     "url": "/covid-19-birdseye/index.html"
   },
   {
-    "revision": "098de05e1a20fb050a6f",
+    "revision": "e8ee105128120fb397de",
     "url": "/covid-19-birdseye/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "aaed10eb5c3822f4f81e",
-    "url": "/covid-19-birdseye/static/js/2.948d896d.chunk.js"
+    "revision": "f04579897881c8f278ca",
+    "url": "/covid-19-birdseye/static/js/2.221a420b.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/covid-19-birdseye/static/js/2.948d896d.chunk.js.LICENSE.txt"
+    "url": "/covid-19-birdseye/static/js/2.221a420b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "098de05e1a20fb050a6f",
-    "url": "/covid-19-birdseye/static/js/main.44ad17ba.chunk.js"
+    "revision": "e8ee105128120fb397de",
+    "url": "/covid-19-birdseye/static/js/main.c63b1ea8.chunk.js"
   },
   {
     "revision": "5539d88bc5a3a2133292",
