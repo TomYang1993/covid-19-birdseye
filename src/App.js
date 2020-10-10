@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <WordCloud width={960} height={500}/>
-        <HistoGramBarChart />
+      <HistoGramBarChart width={900} height={400}/>
     </div>
   );
 }
