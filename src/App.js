@@ -9,7 +9,7 @@ function App() {
   
   return (
     <div className="App">
-      <WordCloud width={1024} height={768}/>
+      <WordCloud width={960} height={500}/>
     </div>
   );
 }
