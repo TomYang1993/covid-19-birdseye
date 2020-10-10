@@ -12,7 +12,7 @@ function HistoGramBar({data, scales}) {
                        x={xScale(new Date(dailyData.date))}
                        y={yScale(dailyData.positive)}
                        height={350 - yScale(dailyData.positive)}
-                       width={8}
+                       width={7}
                        fill={"teal"}
                 />)
             )}
