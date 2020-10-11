@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import * as d3 from 'd3'
 
-export default function HistoGramAxis({orient, scale, tickSize, translate}) {
+export default function HistoGramAxis({orient, scale, tickSize, translate, caseType}) {
 
     const d3AxisContainer = useRef(null)
 
@@ -19,7 +19,7 @@ export default function HistoGramAxis({orient, scale, tickSize, translate}) {
 
     useEffect(() => {
         renderAxis();
-    }, [])
+    }, [caseType])
 
     return (
         <g

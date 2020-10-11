@@ -43,6 +43,7 @@ function WordCloud({ width, height }) {
             .rotate(function () { return d3.randomInt(-60, 60)(); })
             .font("Impact")
             .fontSize(function (d) { return d.size; })
+            .spiral("rectangular")
             .on("end", draw);
 
         layout.start();
