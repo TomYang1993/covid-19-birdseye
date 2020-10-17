@@ -48,10 +48,14 @@ function HistoGramBarChart({width, height, caseType}) {
         setCurrentHighlight(index)
     }
 
+    const endDate = new Date().toISOString().split('T')[0];
+    const startDate = new Date(Date.now() - 89 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
+    console.log("startDate", startDate)
+console.log("endDate", endDate)
     // scaleBand type
     const xScale = d3.scaleTime()
-        .domain([new Date("2020-07-13"), new Date("2020-10-09")])
+        .domain([new Date(startDate), new Date(endDate)])
         .rangeRound([margins.left, width - margins.right])
         .nice()
 
