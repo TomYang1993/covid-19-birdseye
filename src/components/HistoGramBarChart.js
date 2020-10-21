@@ -10,7 +10,7 @@ function HistoGramBarChart({width, height, caseType}) {
 
 
     const yMaxDomains ={
-        positive: 8000000,
+        positive: 9000000,
         deathIncrease: 2000,
         positiveIncrease: 100000
     }
@@ -39,7 +39,7 @@ function HistoGramBarChart({width, height, caseType}) {
 
         // componentWillUnmount
         return () => {
-            console.log("clean up side effects")
+            // console.log("clean up side effects")
         }
 
     }, []);
