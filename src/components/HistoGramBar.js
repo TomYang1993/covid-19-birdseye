@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import * as d3 from "d3";
 
-function HistoGramBar({data, scales, highlightedBar, highlightBar, caseType}) {
+function HistoGramBar({data, xScale, yScale, highlightedBar, highlightBar, caseType}) {
 
-    const {xScale, yScale} = scales;
+    console.log("inside HistoGramBar",yScale)
 
     const colorWheel = {
         positive: {
@@ -23,7 +23,7 @@ function HistoGramBar({data, scales, highlightedBar, highlightBar, caseType}) {
 
     return (
         <g onMouseOut={() => highlightBar(null)}>
-            {data.map((dailyData, index) =>
+            { data.map((dailyData, index) =>
                 (<rect key={dailyData.date}
                        x={xScale(new Date(dailyData.date))}
                        y={yScale(dailyData[caseType])}
