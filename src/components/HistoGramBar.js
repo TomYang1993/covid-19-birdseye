@@ -3,8 +3,6 @@ import * as d3 from "d3";
 
 function HistoGramBar({data, xScale, yScale, highlightedBar, highlightBar, caseType}) {
 
-    console.log("inside HistoGramBar",yScale)
-
     const colorWheel = {
         positive: {
             normal: "#FA8072",

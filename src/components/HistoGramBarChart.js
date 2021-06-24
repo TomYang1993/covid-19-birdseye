@@ -40,8 +40,6 @@ function HistoGramBarChart({width, height, caseType, data}) {
         translate: `translate(70, 20)`,
         tickSize: 20,
     }
-    console.log(yMaxDomains)
-
 
     const highlightBar = index => {
         setCurrentHighlight(index)
@@ -50,8 +48,8 @@ function HistoGramBarChart({width, height, caseType, data}) {
     const endDate = new Date().toISOString().split('T')[0];
     const startDate = new Date(Date.now() - 89 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
-    console.log("startDate the ", startDate)
-    console.log("endDate the same", endDate)
+    // console.log("startDate the ", startDate)
+    // console.log("endDate the same", endDate)
     // scaleBand type
     const xScale = d3.scaleTime()
         .domain([new Date(startDate), new Date(endDate)])
