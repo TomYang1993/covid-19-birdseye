@@ -9,16 +9,23 @@ function App() {
     const [caseType, setCaseType] = useState("positive")
     const [usHistoryData, setUsHistoryData] = useState([]);
 
-    console.log("App top level render")
+    // console.log("App top level render")
 
     useEffect(() => {
-        fetch('https://api.covidtracking.com/v1/us/daily.json').then((resp) => {
+        const opts = {
+            headers:{
+                "X-App-Token":"GRSvmK72hJ6S3Mj4vxoEQGvTe"
+            }
+        }
+        fetch("https://data.cdc.gov/resource/9mfq-cb36.json?state=PA&&$where=submission_date >= \'2021-06-10T12:00:00\'&&$order=submission_date",opts).then((resp) => {
             if (!resp.ok) {
                 throw new Error('Network response was not ok');
             }
             return resp.json();
         }).then((data) => {
+            
             let displayData = data.slice(0, 88)
+            console.log(displayData)
             displayData.forEach((ele) => {
                 ele.date = ele.date.toString();
                 let year = ele.date.slice(0, 4)
