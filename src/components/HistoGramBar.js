@@ -4,15 +4,15 @@ import * as d3 from "d3";
 function HistoGramBar({data, xScale, yScale, highlightedBar, highlightBar, caseType}) {
 
     const colorWheel = {
-        positive: {
+        tot_cases: {
             normal: "#FA8072",
             highlight: "#DC143C"
         },
-        deathIncrease: {
+        new_death: {
             normal: "#808080",
             highlight: "#303030"
         },
-        positiveIncrease: {
+        new_case: {
             normal: "#FFA500",
             highlight: "#FF4500"
         },
@@ -22,8 +22,8 @@ function HistoGramBar({data, xScale, yScale, highlightedBar, highlightBar, caseT
     return (
         <g onMouseOut={() => highlightBar(null)}>
             { data.map((dailyData, index) =>
-                (<rect key={dailyData.date}
-                       x={xScale(new Date(dailyData.date))}
+                (<rect key={dailyData.submission_date}
+                       x={xScale(new Date(dailyData.submission_date))}
                        y={yScale(dailyData[caseType])}
                        height={350 - yScale(dailyData[caseType])}
                        width={6}
