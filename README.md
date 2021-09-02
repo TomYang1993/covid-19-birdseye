@@ -2,3 +2,7 @@
 
 
 ## world cloud feature
+
+## deployment
+
+`npm run deploy` to trigger gh-pages build
