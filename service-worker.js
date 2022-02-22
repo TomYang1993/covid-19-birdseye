@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/covid-19-birdseye/precache-manifest.6296251a2b4b31790fac883aacc3f2ef.js"
+  "/covid-19-birdseye/precache-manifest.8d26333c6d0e72a0b6b5f8ff587a715c.js"
 );
 
 self.addEventListener('message', (event) => {
