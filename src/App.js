@@ -10,12 +10,15 @@ function App() {
   // console.log("App top level render")
 
   useEffect(() => {
+    const today = new Date();
+    const priorDate = new Date(new Date().setDate(today.getDate() - 90));
+    const apiQueryDate = priorDate.toISOString().slice(0, 19);
     const opts = {
       headers: {
         "X-App-Token": "GRSvmK72hJ6S3Mj4vxoEQGvTe",
       },
     };
-    fetch("https://data.cdc.gov/resource/9mfq-cb36.json?state=PA&&$where=submission_date >= '2021-06-10T12:00:00'&&$order=submission_date", opts)
+    fetch(`https://data.cdc.gov/resource/9mfq-cb36.json?state=PA&&$where=submission_date >= '${apiQueryDate}'&&$order=submission_date`, opts)
       .then((resp) => {
         if (!resp.ok) {
           throw new Error("Network response was not ok");
@@ -26,7 +29,7 @@ function App() {
         let displayData = data.slice(0, 88);
         console.log(displayData);
         displayData.forEach((ele) => {
-          ele.submission_date = ele.submission_date.slice(0,10);
+          ele.submission_date = ele.submission_date.slice(0, 10);
         });
         console.log("comes back from API", displayData);
         displayData = displayData.reverse();
@@ -47,7 +50,6 @@ function App() {
       <WordCloud width={900} height={450} />
       <div className="histogram-title">COVID 19 Cases in U.S.A</div>
       <div className="histogram-label-section">
-  
         <div
           className="histogram-label"
           onClick={() => {

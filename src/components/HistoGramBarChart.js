@@ -26,8 +26,8 @@ function HistoGramBarChart({width, height, caseType, data}) {
     // set max y values TODO: according to new death or new case adjust
     const yMaxDomains = {
         tot_cases: findNearest(caseMax),
-        new_death: 100,
-        new_case: 5000
+        new_death: 5000,
+        new_case: 500000
     }
     const yScale = d3.scaleLinear()
         // scaleLinear domain required at least two values, min and max
